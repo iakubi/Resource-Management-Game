@@ -43,5 +43,8 @@ public class TextManagementGame{
         generators.add(x);
     }
 
-    
+    public static void main(String[] args){
+        TextManagementGame game = new TextManagementGame();
+        game.start();
+    }
 }

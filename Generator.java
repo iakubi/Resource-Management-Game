@@ -1,6 +1,6 @@
 import java.util.*;
 
-abstract class Generator {
+public abstract class Generator {
     private String name;
     private ArrayList<Resource> constructionCost;
     private int resourceProductionRate;

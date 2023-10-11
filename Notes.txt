@@ -3,16 +3,15 @@ TextManagementGame
 - add starting resoures
 - need to initalize resources
 - maybe a difficulty setting (?)
-- maybe more rng to promote replayablity 
+- maybe more rng to promote replayablity
+- create abstracts for resource 
 
 Population (Resource)
 - parent class 
-- start with 10 people in civilization
-- those left in population will create more population 
 
-    Enlisted (Population - Resource)
-        - start with 0 can add from population
-        - need to work on initializion of it needs to be sort of skeletonish to avoid rerolls
+    Idle (Population - Resource)
+        - start with 10 
+        - Contribute to defense 
 
     Farming (Population - Resource)
         - start with 0 can add from population 
