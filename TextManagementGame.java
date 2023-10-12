@@ -11,6 +11,10 @@ public class TextManagementGame{
     public TextManagementGame() {
         round = 1;
         scanner = new Scanner(System.in);
+        Population ppl = new Population("Population");
+        ppl.setIsCrticial(true);
+        ppl.add(10);
+        
     }
 
     public boolean haveEventThisTurn(int number){
@@ -43,6 +47,38 @@ public class TextManagementGame{
         generators.add(x);
     }
 
+    public void start(){
+        System.out.println("Welcome to the Civilization Game.");
+        System.out.println("Please choose your difficulty.");
+        System.out.println("\t1. Easy.");
+        System.out.println("\t2. Medium.");
+        System.out.println("\t3. Hard.");
+        int choice = scanner.nextInt();
+        int oddsOfRandomEvent;
+
+        switch(choice) {
+            case 1:
+                int oddsOfRandomEvent = 10;
+                break;
+            case 2:
+                int oddsOfRandomEvent = 5;
+                break;
+            case 3:
+                int oddsOfRandomEvent = 3;
+                break;
+        }
+
+        while (!isCriticalResourcesEmpty()){
+            System.out.println("\nTime " + round);
+
+            if (haveEventThisTurn(oddsOfRandomEvent)){
+                //something lol 
+            }
+        }
+
+        
+
+    }
     public static void main(String[] args){
         TextManagementGame game = new TextManagementGame();
         game.start();

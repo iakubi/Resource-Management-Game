@@ -41,7 +41,7 @@ Generators
 - not forced to spend skill points
 
 Events 
-- im thinking that we have 3 main events 
+- im thinking that we have 3 main events that could alter the course of your game
 - rival civilization claims ur land 
     - have a random number generated of their warring population 
     - have their strength be based upon this
@@ -57,9 +57,7 @@ Events
     - decrease your culture by y amount
     - can refuse refugees with no negative consequences
 
-- developing a trade partner (not concrete subject to change)
-    - x civilization (random names go) wants to develop a trade relationship
-    - 
+- 
 
 - engineer a whole wonder of the world
     - way to "win" the game 
