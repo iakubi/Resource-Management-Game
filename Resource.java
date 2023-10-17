@@ -28,13 +28,4 @@ public abstract class Resource {
     public void add(int amount) {
         quantity += amount;
     }
-
-    public void consume(int amount) {
-        if (quantity >= amount) {
-            quantity -= amount;
-        } else {
-            quantity = 0;
-            System.out.println("Not enough " + name + " to consume.");
-        }
-    }
 }

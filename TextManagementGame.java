@@ -4,6 +4,7 @@ public class TextManagementGame{
     private int round; 
     private ArrayList<Resource> resources = new ArrayList<Resource>();
     private ArrayList<Generator> generators = new ArrayList<Generator>();
+    private Random random = new Random();
 
     private Scanner scanner;
 
@@ -11,14 +12,9 @@ public class TextManagementGame{
     public TextManagementGame() {
         round = 1;
         scanner = new Scanner(System.in);
-        Population ppl = new Population("Population");
-        ppl.setIsCrticial(true);
-        ppl.add(10);
-        
     }
 
     public boolean haveEventThisTurn(int number){
-        Random random = new Random();
         int chance = random.nextInt(number); 
         return chance == 0; 
     }
@@ -47,6 +43,15 @@ public class TextManagementGame{
         generators.add(x);
     }
 
+    public boolean isCriticalResourceEmpty(){
+        for(Resource r : resources){
+            if(r.isCritical() && r.getQuantity() == 0){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void start(){
         System.out.println("Welcome to the Civilization Game.");
         System.out.println("Please choose your difficulty.");
@@ -72,6 +77,24 @@ public class TextManagementGame{
             System.out.println("\nTime " + round);
 
             if (haveEventThisTurn(oddsOfRandomEvent)){
+                int randomEvent = random.nextInt(4)+1;
+                switch(randomEvent) { 
+                    case 1:
+                        //rival civ claims your land
+                        break;
+                    case 2:
+                        //great sage comes to your land
+                        break;
+                    case 3:
+                        //refugees come to your land
+                        break;
+                    case 4:
+                        //if this event happens three times war happens lol !!! 
+                        break;
+                    default:
+                        break; 
+
+                }
                 //something lol 
             }
         }

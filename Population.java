@@ -1,4 +1,4 @@
-public class Population extends Resource {
+public abstract class Population extends Resource {
 
     //constructor
     public Population(String n){
@@ -15,5 +15,4 @@ public class Population extends Resource {
     }
 
     
-
 }
